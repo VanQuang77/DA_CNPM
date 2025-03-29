@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Công việc</title>
+    <link rel="stylesheet" href="../css/type-of-work1.css">
+</head>
+<body>
+    <nav>
+        <a href="project.html">Công việc</a>
+        <a href="home.html">Trang chủ</a>
+    </nav>
+
+    <div class="container">
+        <h2>Danh Sách Công việc</h2>
+
+        <!-- Chọn loại Công việc -->
+        <label for="projectTypeFilter">Lọc theo loại công việc:</label>
+        <select id="projectTypeFilter" onchange="displayProjects()">
+            <option value="all">Tất cả</option>
+            <option value="phần mềm">Công việc phát triển phần mềm</option>
+            <option value="marketing">Công việc marketing</option>
+            <option value="R&D">Công việc nghiên cứu & phát triển</option>
+            <option value="đồ họa">Công việc thiết kế đồ họa</option>
+            <option value="sự kiện">Công việc sự kiện</option>
+            <option value="xây dựng">Công việc xây dựng</option>
+            <option value="đào tạo">Công việc đào tạo</option>
+            <option value="tài chính">Công việc tài chính</option>
+            <option value="hợp tác">công việc hợp tác đối tác</option>
+            <option value="tiến lên">Công việc của 4 người</option>
+        </select>
+
+        <!-- Form nhập Công việc -->
+        <div class="form-group">
+            <input type="text" id="projectName" placeholder="Tên Công việc">
+            <input type="text" id="projectDesc" placeholder="Mô tả Công việc">
+            <select id="projectType">
+                <option value="phần mềm">Công việc phát triển phần mềm</option>
+                <option value="marketing">Công việc marketing</option>
+                <option value="R&D">Công việc nghiên cứu & phát triển</option>
+                <option value="đồ họa">Công việc thiết kế đồ họa</option>
+                <option value="sự kiện">Công việc sự kiện</option>
+                <option value="xây dựng">Công việc xây dựng</option>
+                <option value="đào tạo">Công việc đào tạo</option>
+                <option value="tài chính">Công việc tài chính</option>
+                <option value="hợp tác">Công việc hợp tác đối tác</option>
+                <option value="tiến lên">Công việc của 4 người</option>
+            </select>
+            <button class="btn-primary" onclick="addProject()">Thêm Công việc</button>
+        </div>
+
+        <!-- Bảng danh sách Công việc -->
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên Công việc</th>
+                    <th>Mô tả</th>
+                    <th>Loại</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="projectList">
+                <!-- Công việc sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/type-of-work1.js"></script>
+</body>
+</html>

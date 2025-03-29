@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Dự Án</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="project.html">Dự án</a>
+        <a href="home.html">Trang chủ</a>
+    </nav>
+
+    <div class="container">
+        <h2>Danh Sách Dự Án</h2>
+
+        <!-- Chọn loại dự án -->
+        <label for="projectTypeFilter">Lọc theo loại dự án:</label>
+        <select id="projectTypeFilter" onchange="displayProjects()">
+            <option value="all">Tất cả</option>
+            <option value="phần mềm">Dự án phát triển phần mềm</option>
+            <option value="marketing">Dự án marketing</option>
+            <option value="R&D">Dự án nghiên cứu & phát triển</option>
+            <option value="đồ họa">Dự án thiết kế đồ họa</option>
+            <option value="sự kiện">Dự án sự kiện</option>
+            <option value="xây dựng">Dự án xây dựng</option>
+            <option value="đào tạo">Dự án đào tạo</option>
+            <option value="tài chính">Dự án tài chính</option>
+            <option value="hợp tác">Dự án hợp tác đối tác</option>
+        </select>
+
+        <!-- Form nhập dự án -->
+        <div class="form-group">
+            <input type="text" id="projectName" placeholder="Tên dự án">
+            <input type="text" id="projectDesc" placeholder="Mô tả dự án">
+            <select id="projectType">
+                <option value="phần mềm">Dự án phát triển phần mềm</option>
+                <option value="marketing">Dự án marketing</option>
+                <option value="R&D">Dự án nghiên cứu & phát triển</option>
+                <option value="đồ họa">Dự án thiết kế đồ họa</option>
+                <option value="sự kiện">Dự án sự kiện</option>
+                <option value="xây dựng">Dự án xây dựng</option>
+                <option value="đào tạo">Dự án đào tạo</option>
+                <option value="tài chính">Dự án tài chính</option>
+                <option value="hợp tác">Dự án hợp tác đối tác</option>
+            </select>
+            <button class="btn-primary" onclick="addProject()">Thêm dự án</button>
+        </div>
+
+        <!-- Bảng danh sách dự án -->
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên dự án</th>
+                    <th>Mô tả</th>
+                    <th>Loại</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="projectList">
+                <!-- Dự án sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/project.js"></script>
+</body>
+</html>
